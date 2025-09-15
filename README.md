@@ -8,57 +8,20 @@ To access the code, go to app > src > main > java
 
 # Programming Instructions
 
-General notes:
-1. Don't change any method headers. These will be correct. 
-2. For testing run the given command in the terminal. It will be of the pattern gradle ______
-3. Say hello to your (maybe) first real code editor. Autocomplete, error highlighting, and other things are about to make your life so much easier. 
-4. Apply for the student github developer pack!!
+1. Run the current program! Does it work? What happens if you write a bad input?
+2. Read through the current code and comments. There are two new concepts to learn about - [JTextField](https://www.tutorialspoint.com/swing/swing_jtextfield.htm) for inputs and [try/catch statements](https://www.w3schools.com/java/java_try_catch.asp). 
+3. Add a new row that converts Celcius to Farenheight
+4. Add a final row that convers units of your choosing, real or imagined. For reference, here is a list of [imperial units](https://en.wikipedia.org/wiki/Imperial_units) - there are many, many, many.
+5. Submit!
 
+# Testing
+Just run your code! Interact with the GUI you create and see if things behave as you expect. 
 
 # Submission
-1. Testing everything. Run the command - 
-``` 
-gradle test
-```
-
-2. Submit on github classroom by running the following commands. This also saves your work permanently (unless you actively want to delete it). 
+ Submit on github classroom by running the following commands. This also saves your work permanently (unless you actively want to delete it). 
 
 ```
 git add . 
 git commit -m "submitting"
 git push
-```
-
-# DELETE THIS: 
-1. Clone existing repo with desktoplite
-2. Run `gradle init --type java-application --package bcc.projectname`
-3. Select version 11 for Java (CSA version), select groovy and JUnit 4
-4. Add extension for java
-5. Add the following to build.gradle for verbose testing: 
-```
-test {
-    testLogging {
-        events "passed", "failed", "skipped"
-        exceptionFormat "full"
-        showStandardStreams = true
-    }
-}
-
-tasks.withType(Test) {
-    testLogging {
-        events "passed", "failed", "skipped"
-        exceptionFormat "full"
-        showStandardStreams = true
-    }
-}
-```
-6. For additional test files (recommended for more granular grading):
-```
-task runTestName(type: Test) {
-    description = "Runs tests in the testName class."
-    group = "verification"
-    filter {
-        includeTestsMatching "bcc.packagename.testName"
-    }
-}
 ```
